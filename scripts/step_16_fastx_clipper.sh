@@ -5,10 +5,6 @@
 #SBATCH --mem=8G
 #SBATCH --job-name=clip_ends
 #SBATCH --output=output/%x-%j.out
-#SBATCH --mail-user=keeganfl@student.ubc.ca
-#SBATCH --mail-type=END
-#SBATCH --mail-type=BEGIN
-#SBATCH --mail-type=FAIL
 
 # list should contain all of the
 # Commands you wish to run.

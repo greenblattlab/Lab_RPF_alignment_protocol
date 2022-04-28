@@ -5,10 +5,6 @@
 #SBATCH --account=def-egreenbl
 #SBATCH --job-name=bowtie_align
 #SBATCH --output=output/%x-%j.out
-#SBATCH --mail-user=keeganfl@student.ubc.ca
-#SBATCH --mail-type=END
-#SBATCH --mail-type=BEGIN
-#SBATCH --mail-type=FAIL
 
 # list should contain all of the
 # Commands you wish to run.

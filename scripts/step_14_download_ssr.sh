@@ -5,14 +5,10 @@
 #SBATCH --account=def-egreenbl
 #SBATCH --job-name=Download_SSR
 #SBATCH --output=output/%x-%j.out
-#SBATCH --mail-user=keeganfl@student.ubc.ca
-#SBATCH --mail-type=END
-#SBATCH --mail-type=BEGIN
-#SBATCH --mail-type=FAIL
 
 module load StdEnv/2020
 module load gcc/9.3.0
-module load sra-toolkit/2.10.8 
+module load sra-toolkit/2.10.8
 
 # list should contain all of the
 # Commands you wish to run.

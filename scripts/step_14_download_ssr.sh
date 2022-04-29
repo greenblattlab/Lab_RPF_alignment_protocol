@@ -9,6 +9,7 @@
 module load StdEnv/2020
 module load gcc/9.3.0
 module load sra-toolkit/2.10.8
+vdb-config --interactive
 
 # list should contain all of the
 # Commands you wish to run.

@@ -1,3 +1,4 @@
+#!/bin/bash
 featureCounts -T 8 -t exon -g gene_id -a $HOME/projects/def-egreenbl/genomes/fly/Drosophila_melanogaster.BDGP6.32.103.gtf -o counts_control_RNA_1.txt control_RNA_1_Aligned.sortedByCoord.out.bam
 featureCounts -T 8 -t exon -g gene_id -a $HOME/projects/def-egreenbl/genomes/fly/Drosophila_melanogaster.BDGP6.32.103.gtf -o counts_control_RNA_2.txt control_RNA_2_Aligned.sortedByCoord.out.bam
 featureCounts -T 8 -t exon -g gene_id -a $HOME/projects/def-egreenbl/genomes/fly/Drosophila_melanogaster.BDGP6.32.103.gtf -o counts_control_RNA_3.txt control_RNA_3_Aligned.sortedByCoord.out.bam

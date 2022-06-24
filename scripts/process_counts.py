@@ -25,10 +25,6 @@ def main(args):
     path = args.path_to_counts # use your path
     all_files = glob.glob(path + "/counts*.txt")
 
-    # Check to ensure that the minimum number of files to run RiboDiff are present.
-    if len(all_files) < 8:
-        raise Exception("Below the minimum number of input files. Please ensure that process_counts is being run in the correct directory with the count files from 2 experimental replicates")
-
     # Create an empty list to put each dataframe into.
     li = []
 
@@ -63,10 +59,6 @@ def main(args):
         elif args.condition2_prefix in i:
             conditions.append("control")
 
-    # Check to ensure that there is a treatment group for every control group.
-    if conditions.count("treated") != conditions.count("control"):
-        raise Exception("The number of samples for each condition must be equal")
-
     # Using a couple of string searches to record if each sample is made
     # of RNA sequences or ribosome profiles
     data_type = []
@@ -75,10 +67,6 @@ def main(args):
             data_type.append("RNA-Seq")
         elif "RPF" in i:
             data_type.append("Ribo-Seq")
-
-    # Check to make sure that each sample has one RNA-Seq and one Ribo-Seq.
-    if data_type.count("RNA-Seq") != data_type.count("Ribo-Seq"):
-        raise Exception("Each sample must have a count file from both RNA sequencing data and ribosome profiling data")
 
     # Combine all of the lists together into a DataFrame
     exp_d = pd.DataFrame({"Samples": samples,
